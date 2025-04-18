@@ -7,10 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
     <style>
-      body {
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
         font-family: 'Roboto', sans-serif;
-        background: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg') no-repeat center center fixed;
-        background-size: cover;
+      }
+      .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
       }
       .glass {
         background: rgba(0, 0, 0, 0.7);
@@ -33,25 +43,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: pulse 3s infinite ease-in-out;
-        position: relative;
-        z-index: 10;
-      }
-      .logo-wrapper {
-        position: relative;
-        display: inline-block;
-      }
-      .logo-wrapper::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://mars.nasa.gov/layout/mars2020/images/Mars2020-PIA23491-Web.jpg') no-repeat center center;
-        background-size: cover;
-        filter: brightness(0.5);
-        z-index: 0;
-        border-radius: 1rem;
       }
       @keyframes pulse {
         0%, 100% { transform: scale(1); opacity: 1; }
@@ -60,21 +51,24 @@
     </style>
   </head>
   <body class="text-white">
-    <header class="text-center py-16 relative">
-      <div class="logo-wrapper px-4 py-10 rounded-2xl inline-block">
-        <h1 class="gorevmars-logo orbitron">GörevMars</h1>
-      </div>
-      <p class="mt-4 text-2xl relative z-10">Mars'a Yolculuk Başladı</p>
+    <video autoplay muted loop class="video-bg">
+      <source src="https://cdn.pixabay.com/vimeo/759449774/mars-planet-112994.mp4?width=1280&hash=fb5b8121e5bc927b6a4b595ea04fa2c91ad17bd9" type="video/mp4">
+    </video>
+
+    <header class="text-center py-16 relative z-10">
+      <h1 class="gorevmars-logo orbitron">GörevMars</h1>
+      <p class="mt-4 text-2xl">Mars'a Yolculuk Başladı</p>
     </header>
 
     <nav class="bg-black bg-opacity-80 py-4 text-center sticky top-0 z-50">
       <a href="#hakkinda" class="mx-4 text-red-300 hover:underline">Mars Hakkında</a>
       <a href="#gorevler" class="mx-4 text-red-300 hover:underline">Görevler</a>
       <a href="#araclar" class="mx-4 text-red-300 hover:underline">Teknoloji</a>
+      <a href="#ajanslar" class="mx-4 text-red-300 hover:underline">Uzay Ajansları</a>
       <a href="#iletisim" class="mx-4 text-red-300 hover:underline">İletişim</a>
     </nav>
 
-    <main class="max-w-6xl mx-auto p-6 space-y-12">
+    <main class="max-w-6xl mx-auto p-6 space-y-12 relative z-10">
       <section id="hakkinda" class="glass p-8 rounded-2xl">
         <h2 class="text-4xl orbitron text-red-400 mb-4">🪐 Mars Hakkında</h2>
         <p>Mars, Güneş Sistemi'nin dördüncü gezegenidir ve insanlık için gelecekteki yaşam alanı olarak değerlendirilmektedir. İnce atmosferi, devasa volkanları ve kurumuş nehir yataklarıyla dikkat çeker.</p>
@@ -99,6 +93,18 @@
         </div>
       </section>
 
+      <section id="ajanslar" class="glass p-8 rounded-2xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-4">🌍 Uzay Ajansları ve Çalışmaları</h2>
+        <ul class="space-y-4">
+          <li><strong>NASA (ABD):</strong> Mars görevlerinde lider konumda. Perseverance ve Ingenuity gibi araçlarla Mars'ta aktif araştırmalar yürütüyor.</li>
+          <li><strong>ESA (Avrupa Uzay Ajansı):</strong> ExoMars programı ile Mars yüzeyinde yaşam belirtilerini araştırıyor. Rusya ve diğer ülkelerle iş birliği içinde çalışıyor.</li>
+          <li><strong>SpaceX (Özel Şirket):</strong> Starship projesi ile Mars'a insan göndermeyi hedefliyor. Koloni kurma hedefi var.</li>
+          <li><strong>Roscosmos (Rusya):</strong> Mars görevlerine bilimsel katkı sağlıyor. ESA ile ortak projelerde yer alıyor.</li>
+          <li><strong>JAXA (Japonya):</strong> Mars'ın uydularını araştıran görevler geliştiriyor ve teknoloji desteği sağlıyor.</li>
+          <li><strong>TUA (Türkiye Uzay Ajansı):</strong> Gelecekte Mars görevlerine katılmayı hedefliyor. Milli Uzay Programı kapsamında araştırmalar yürütüyor.</li>
+        </ul>
+      </section>
+
       <section id="iletisim" class="glass p-8 rounded-2xl">
         <h2 class="text-4xl orbitron text-red-400 mb-4">📡 İletişim ve Katılım</h2>
         <p>GörevMars hakkında daha fazla bilgi almak veya katkıda bulunmak isterseniz bize ulaşın.</p>
@@ -111,7 +117,7 @@
       </section>
     </main>
 
-    <footer class="text-center py-8 text-sm text-gray-300 bg-black bg-opacity-80">
+    <footer class="text-center py-8 text-sm text-gray-300 bg-black bg-opacity-80 relative z-10">
       GörevMars © 2025 | Mars Görevleri için Hazırız
     </footer>
   </body>
