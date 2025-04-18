@@ -38,7 +38,18 @@
       </div>
     </header>
 
-    <main class="pt-32 px-6 max-w-6xl mx-auto">
+    <main>
+      <section class="relative h-screen w-full overflow-hidden">
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
+          <source src="https://player.vimeo.com/external/449784482.sd.mp4?s=6e0d39d4d4424f9397a4bbd117b04c3abdd50a86&profile_id=164" type="video/mp4" />
+        </video>
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center text-center px-6">
+          <h1 class="text-5xl font-extrabold text-white orbitron mb-4">GÖREVMARS</h1>
+          <p class="text-xl text-gray-200 max-w-2xl">Kızıl Gezegen'e Yolculuk Başladı. Bilim, teknoloji ve görevlerle Mars'ın derinliklerine iniyoruz.</p>
+        </div>
+      </section>
+
+      <div class="pt-32 px-6 max-w-6xl mx-auto">
       <section id="hakkinda" class="mb-24">
         <h2 class="text-4xl orbitron text-purple-300 mb-6">🔭 Mars Hakkında</h2>
         <p class="text-gray-300 leading-loose">
@@ -85,4 +96,5 @@
     </main>
   </body>
 </html>
+
 
