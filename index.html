@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: 'Roboto', sans-serif;
         background-color: #000;
@@ -38,7 +42,22 @@
         transform: translateY(-5px);
         background-color: rgba(255, 255, 255, 0.1);
       }
-    </style>
+          .glass {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .glass:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-3px);
+      }
+
+      .hero-gradient {
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+      }
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -59,7 +78,7 @@
     </header>
 
     <section class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg');">
-      <div class="bg-black bg-opacity-70 p-10 rounded-xl text-center">
+      <div class="glass p-10 rounded-xl text-center">
         <h2 class="text-5xl font-bold orbitron text-yellow-400 mb-4">Mars'a Yolculuk Başladı</h2>
         <p class="max-w-xl mx-auto mb-6 text-lg">İnsanlığın kızıl gezegene olan büyük görevini keşfedin. Ajanslar, görevler ve teknolojilerle GörevMars'a hoş geldiniz.</p>
         <a href="#gorevler" class="inline-block border border-white px-6 py-2 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition">Görevleri İncele</a>
@@ -75,18 +94,7 @@
 
     <section id="gorevler" class="py-24 px-6 max-w-6xl mx-auto">
   <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Uzay Ajanslarının Yakın Gelecek Görevleri</h2>
-  <div class="mb-6 text-center">
-    <label for="mission-filter" class="block mb-2 text-sm font-medium text-gray-200">Görevlere Göre Filtrele:</label>
-    <select id="mission-filter" class="text-black px-4 py-2 rounded" onchange="filterMissions(this.value)">
-      <option value="all">Tümü</option>
-      <option value="nasa">NASA</option>
-      <option value="esa">ESA</option>
-      <option value="spacex">SpaceX</option>
-      <option value="tua">TUA</option>
-      <option value="jaxa">JAXA</option>
-      <option value="roscosmos">Roscosmos</option>
-    </select>
-  </div>
+  
   <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
     
     </div>
@@ -124,7 +132,7 @@
   </div>
   <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Uzay Teknolojileri ve Aletleri</h2>
   <div class="grid md:grid-cols-2 gap-6 text-lg">
-    <div class="card">
+    <div class="card glass">
   <img src="https://mars.nasa.gov/system/resources/detail_files/25778_PIA24543-FigureA-web.jpg" alt="Perseverance Aracı" class="w-full mb-4 rounded">
   <h3 class="text-xl font-bold">🔬 Perseverance Rover</h3>
   <p class="mb-2">Mars yüzeyinde jeolojik örnekler toplayan ve mikroorganizma izlerini araştıran bilimsel keşif aracıdır.</p>
@@ -256,4 +264,3 @@ function filterMissions(agency) {
 </script>
 </body>
 </html>
-
