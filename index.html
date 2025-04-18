@@ -73,29 +73,97 @@
     </section>
 
     <section id="gorevler" class="py-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Mevcut ve Gelecek Mars Görevleri</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card">
-          <h3 class="text-xl font-bold">Perseverance (2020)</h3>
-          <p>NASA'nın Mars 2020 misyonu ile gönderdiği araç, astrobiyolojik araştırmalar yapıyor.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold">Artemis Mars Transfer (2026)</h3>
-          <p>Ay’dan Mars’a geçiş için insanlı görev planı. NASA & ESA işbirliğiyle hazırlanıyor.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold">Türk Mars Projesi (2030)</h3>
-          <p>TUA'nın hedeflediği ilk Mars keşif görevi. Yüzey gözlemleri ve veri toplama amaçlı.</p>
-        </div>
-        <div class="card">
-          <h3 class="text-xl font-bold">VisionX Mars Lab (2032)</h3>
-          <p>Mars yüzeyine inerek mobil laboratuvar kurulumu sağlayacak otonom sistem.</p>
-        </div>
-      </div>
-    </section>
+  <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Uzay Ajanslarının Yakın Gelecek Görevleri</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="card">
+      <h3 class="text-xl font-bold">NASA - Mars Sample Return (2028)</h3>
+      <p>Mars yüzeyinden alınan örneklerin dünyaya getirilmesi planlanıyor. Perseverance ile toplanan numuneler, yörüngeye fırlatılacak ve bir başka araçla dünyaya getirilecek.</p>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-bold">ESA - ExoMars Rover (2026)</h3>
+      <p>ESA'nın Rosalind Franklin Rover'ı, Mars'ta yaşam izlerini araştırmak üzere yüzeyde sondaj yapacak.</p>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-bold">SpaceX - İlk Mars İnişi (2026)</h3>
+      <p>Starship ile insansız kargo inişi planlanıyor. Bu görev, insanlı kolonizasyon için ilk adım olarak görülüyor.</p>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-bold">TUA - Mars Mini Gözcü Uydusu (2029)</h3>
+      <p>Türkiye Uzay Ajansı'nın planladığı ilk derin uzay görevinde, Mars yörüngesine küçük boyutlu keşif uydusu gönderilecek.</p>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-bold">JAXA - MMX Görevi (2026)</h3>
+      <p>Japon Uzay Ajansı'nın MMX görevi, Mars’ın uydusu Phobos’tan örnek toplayıp dünyaya getirmeyi hedefliyor.</p>
+    </div>
+    <div class="card">
+      <h3 class="text-xl font-bold">Roscosmos - Mars 2030</h3>
+      <p>Rus uzay ajansı Roscosmos’un planladığı bilimsel laboratuvar taşıyıcı araçla Mars yüzeyi analiz edilecek.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Diğer bölümler (araclar, ajanslar, takvim) zaten gelişmiş şekilde tanımlı -->
+    <section id="araclar" class="py-24 px-6 max-w-6xl mx-auto">
+  <div class="mb-8 text-center">
+    <label for="tech-filter" class="block mb-2 text-sm font-medium text-gray-200">Filtrele:</label>
+    <select id="tech-filter" class="text-black px-4 py-2 rounded" onchange="filterTech(this.value)">
+      <option value="all">Tümü</option>
+      <option value="rover">Keşif Araçları</option>
+      <option value="helikopter">Helikopter</option>
+      <option value="roket">Roket</option>
+      <option value="uydu">Uydu</option>
+    </select>
+  </div>
+  <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Uzay Teknolojileri ve Aletleri</h2>
+  <div class="grid md:grid-cols-2 gap-6 text-lg">
+    <div class="card">
+  <img src="https://mars.nasa.gov/system/resources/detail_files/25778_PIA24543-FigureA-web.jpg" alt="Perseverance Aracı" class="w-full mb-4 rounded">
+  <h3 class="text-xl font-bold">🔬 Perseverance Rover</h3>
+  <p class="mb-2">Mars yüzeyinde jeolojik örnekler toplayan ve mikroorganizma izlerini araştıran bilimsel keşif aracıdır.</p>
+  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
+</div>
+    <div class="card">
+  <img src="https://mars.nasa.gov/system/news_items/main_images/9090_PIA23720-FigureA-web.jpg" alt="Ingenuity Helikopteri" class="w-full mb-4 rounded">
+  <h3 class="text-xl font-bold">🚁 Ingenuity Helikopteri</h3>
+  <p class="mb-2">Mars atmosferinde ilk motorlu uçuşu gerçekleştiren mini helikopter. Yüzey keşiflerinde kullanılıyor.</p>
+  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
+</div>
+    <div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Starship_SN9_-_Jan_2021_%28cropped%29.jpg/640px-Starship_SN9_-_Jan_2021_%28cropped%29.jpg" alt="Starship" class="w-full mb-4 rounded">
+  <h3 class="text-xl font-bold">🚀 SpaceX Starship</h3>
+  <p class="mb-2">Yüksek taşıma kapasitesi ve yeniden kullanılabilir yapısıyla Mars’a insan taşımayı hedefleyen yeni nesil roket.</p>
+  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
+</div>
+    <div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/ESA_ExoMars_Rover_2022.png" alt="ExoMars Rover" class="w-full mb-4 rounded">
+  <h3 class="text-xl font-bold">🔍 ExoMars Rover</h3>
+  <p class="mb-2">ESA'nın Mars’a göndereceği gelişmiş keşif aracı. Toprak altından numune alarak yaşam izi arayacak.</p>
+  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
+</div>
+    <div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/TUA_logo.png" alt="TUA Uydusu" class="w-full mb-4 rounded">
+  <h3 class="text-xl font-bold">🛰 TUA - Yerli Mars Uydusu</h3>
+  <p class="mb-2">Türkiye Uzay Ajansı tarafından geliştirilen mini gözlem uydusu. Mars’ın yüzey haritalamasında kullanılacak.</p>
+  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
+</div>
+  </div>
+</section>
 
-  </body>
+<!-- Diğer bölümler (araclar, ajanslar, takvim) zaten gelişmiş şekilde tanımlı -->
+
+  <script>
+function filterTech(type) {
+  const cards = document.querySelectorAll('#araclar .card');
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
+    if (type === 'all') {
+      card.style.display = 'block';
+    } else if (text.includes(type)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
 </html>
-
