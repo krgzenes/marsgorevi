@@ -94,42 +94,48 @@
 
     <section id="gorevler" class="py-24 px-6 max-w-6xl mx-auto">
   <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Uzay Ajanslarının Yakın Gelecek Görevleri</h2>
-  
   <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-    
+    <div class="card glass">
+      <img src="https://mars.nasa.gov/system/news_items/main_images/9678_PIA25681-MarsSampleReturn.jpg" alt="NASA Görevi" class="w-full mb-4 rounded">
+      <h3 class="text-xl font-bold mb-2">NASA - Mars Sample Return (2028)</h3>
+      <p>Mars yüzeyinden alınan örneklerin dünyaya getirilmesi planlanıyor. Perseverance ile toplanan numuneler, yörüngeye fırlatılacak.</p>
+      <a href="https://mars.nasa.gov/mars-sample-return/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
-    
-<a href="https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars" target="_blank" class="text-blue-400 hover:underline text-sm mt-2 inline-block">🔗 Daha Fazla Bilgi</a>
+    <div class="card glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/ESA_ExoMars_Rover_2022.png" alt="ESA Görevi" class="w-full mb-4 rounded">
+      <h3 class="text-xl font-bold mb-2">ESA - ExoMars Rover (2026)</h3>
+      <p>ESA'nın Rosalind Franklin Rover'ı, Mars'ta yaşam izlerini araştırmak üzere yüzeyde sondaj yapacak.</p>
+      <a href="https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
-    $1
-<p></p>
-<a href="https://www.spacex.com/human-spaceflight/mars/" target="_blank" class="text-blue-400 hover:underline text-sm mt-2 inline-block">🔗 Daha Fazla Bilgi</a>
+    <div class="card glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Starship_SN9_-_Jan_2021_%28cropped%29.jpg" alt="SpaceX Görevi" class="w-full mb-4 rounded">
+      <h3 class="text-xl font-bold mb-2">SpaceX - İlk Mars İnişi (2026)</h3>
+      <p>Starship ile insansız kargo inişi planlanıyor. Bu görev, insanlı kolonizasyon için ilk adım olacak.</p>
+      <a href="https://www.spacex.com/human-spaceflight/mars/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
-    
-<a href="https://www.tua.gov.tr" target="_blank" class="text-blue-400 hover:underline text-sm mt-2 inline-block">🔗 Daha Fazla Bilgi</a>
+    <div class="card glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/TUA_logo.png" alt="TUA Görevi" class="w-full mb-4 rounded bg-white p-2">
+      <h3 class="text-xl font-bold mb-2">TUA - Mars Mini Uydu (2029)</h3>
+      <p>Türkiye Uzay Ajansı'nın ilk derin uzay görevi olacak olan bu proje ile Mars yörüngesine mini uydu gönderilecek.</p>
+      <a href="https://www.tua.gov.tr" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
-    $1
-<p>$2</p>
-<a href="https://mmx.isas.jaxa.jp/en/" target="_blank" class="text-blue-400 hover:underline text-sm mt-2 inline-block">🔗 Daha Fazla Bilgi</a>
+    <div class="card glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/JAXA_logo.svg" alt="JAXA Görevi" class="w-full mb-4 rounded bg-white p-2">
+      <h3 class="text-xl font-bold mb-2">JAXA - MMX Görevi (2026)</h3>
+      <p>Japonya'nın Mars'ın uydusu Phobos’tan örnek toplayıp dünyaya getirmeyi hedeflediği görev.</p>
+      <a href="https://mmx.isas.jaxa.jp/en/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
-    $1
-<p>$2</p>
-<a href="https://www.roscosmos.ru/" target="_blank" class="text-blue-400 hover:underline text-sm mt-2 inline-block">🔗 Daha Fazla Bilgi</a>
+    <div class="card glass">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Roscosmos_logo_ru.svg" alt="Roscosmos Görevi" class="w-full mb-4 rounded bg-white p-2">
+      <h3 class="text-xl font-bold mb-2">Roscosmos - Mars 2030</h3>
+      <p>Roscosmos’un planladığı bu görevde yüzey araştırmaları ve biyolojik örneklemeler hedefleniyor.</p>
+      <a href="https://www.roscosmos.ru/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
     </div>
   </div>
 </section>
 
     <section id="araclar" class="py-24 px-6 max-w-6xl mx-auto">
-  <div class="mb-8 text-center">
-    <label for="tech-filter" class="block mb-2 text-sm font-medium text-gray-200">Filtrele:</label>
-    <select id="tech-filter" class="text-black px-4 py-2 rounded" onchange="filterTech(this.value)">
-      <option value="all">Tümü</option>
-      <option value="rover">Keşif Araçları</option>
-      <option value="helikopter">Helikopter</option>
-      <option value="roket">Roket</option>
-      <option value="uydu">Uydu</option>
-    </select>
-  </div>
+  
   <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Uzay Teknolojileri ve Aletleri</h2>
   <div class="grid md:grid-cols-2 gap-6 text-lg">
     <div class="card glass">
