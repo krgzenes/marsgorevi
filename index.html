@@ -19,11 +19,30 @@
       .orbitron {
         font-family: 'Orbitron', sans-serif;
       }
+      .animate-spin-slow {
+        animation: spin 10s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .gorevmars-logo {
+        font-size: 5rem;
+        letter-spacing: 0.2rem;
+        background: linear-gradient(to right, #ff0000, #ffa500, #ffff00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: pulse 3s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.8; }
+      }
     </style>
   </head>
   <body class="text-white">
     <header class="text-center py-16 bg-black bg-opacity-80">
-      <h1 class="text-6xl orbitron text-red-400">GörevMars</h1>
+      <h1 class="gorevmars-logo orbitron">GörevMars</h1>
       <p class="mt-4 text-2xl">Mars'a Yolculuk Başladı</p>
     </header>
 
@@ -46,12 +65,17 @@
           <li><strong>Perseverance (2020)</strong>: Mars yüzeyinde yaşam belirtileri araştırıyor.</li>
           <li><strong>Artemis Mars Transfer</strong>: İnsanlı Mars yolculuğu ön hazırlık görevi.</li>
           <li><strong>Türk Mars Projesi (Gelecek)</strong>: Türkiye'nin Mars'a ilk keşif misyonu.</li>
+          <li><strong>VisionX Mars Lab (2027)</strong>: Mars yüzeyinde laboratuvar kurarak toprak ve hava analizleri yapacak.</li>
+          <li><strong>Genesis Colony (2035)</strong>: Mars’ta kalıcı insan kolonisi için ilk yerleşim altyapısını oluşturacak görev.</li>
         </ul>
       </section>
 
       <section id="araclar" class="glass p-8 rounded-2xl">
         <h2 class="text-4xl orbitron text-red-400 mb-4">🔧 Teknoloji ve Araçlar</h2>
         <p>Görevlerde kullanılan roverlar, iniş sistemleri, yaşam destek modülleri ve iletişim uyduları gibi araçlar tanıtılır. SpaceX Starship, NASA'nın Atlas V roketi, yeraltı sondaj cihazları bu bölümde açıklanabilir.</p>
+        <div class="flex justify-center mt-6">
+          <img src="https://mars.nasa.gov/system/content_pages/main_images/418_rover-animation.gif" alt="Mars Rover" class="w-64 h-64 animate-spin-slow" />
+        </div>
       </section>
 
       <section id="iletisim" class="glass p-8 rounded-2xl">
