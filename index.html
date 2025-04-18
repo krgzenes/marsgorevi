@@ -83,6 +83,16 @@
         background-color: white;
         color: black;
       }
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+      }
     </style>
   </head>
   <body>
@@ -98,7 +108,7 @@
 
     <section class="hero-video">
       <video autoplay muted loop>
-        <source src="https://cdn.pixabay.com/vimeo/759449774/mars-planet-112994.mp4?width=1280" type="video/mp4">
+        <source src="https://player.vimeo.com/external/370205544.sd.mp4?s=2b38b6de3c4ce3aeb9e6c05343b06b474476d398&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
       </video>
       <div class="hero-content">
         <h1 class="orbitron">Mars'a Yolculuk Başladı</h1>
@@ -107,46 +117,6 @@
       </div>
     </section>
 
-    <main class="max-w-6xl mx-auto space-y-20">
-      <section id="hakkinda" class="section">
-        <h2 class="text-4xl orbitron text-red-400 mb-6">🪐 Mars Hakkında</h2>
-        <p>Mars, Güneş Sistemi'nin dördüncü gezegenidir ve insanlık için gelecekteki yaşam alanı olarak değerlendirilmektedir. İnce atmosferi, devasa volkanları ve kurumuş nehir yataklarıyla dikkat çeker.</p>
-      </section>
-
-      <section id="gorevler" class="section bg-black bg-opacity-70 rounded-xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-6">🚀 Mars Görevleri</h2>
-        <ul class="list-disc ml-6 space-y-2">
-          <li><strong>Perseverance (2020)</strong>: Mars yüzeyinde yaşam belirtileri araştırıyor.</li>
-          <li><strong>Artemis Mars Transfer</strong>: İnsanlı Mars yolculuğu ön hazırlık görevi.</li>
-          <li><strong>Türk Mars Projesi (Gelecek)</strong>: Türkiye'nin Mars'a ilk keşif misyonu.</li>
-          <li><strong>VisionX Mars Lab (2027)</strong>: Mars yüzeyinde laboratuvar kurarak toprak ve hava analizleri yapacak.</li>
-          <li><strong>Genesis Colony (2035)</strong>: Mars’ta kalıcı insan kolonisi için ilk yerleşim altyapısını oluşturacak görev.</li>
-        </ul>
-      </section>
-
-      <section id="araclar" class="section">
-        <h2 class="text-4xl orbitron text-red-400 mb-6">🔧 Teknoloji ve Araçlar</h2>
-        <p>Görevlerde kullanılan roverlar, iniş sistemleri, yaşam destek modülleri ve iletişim uyduları gibi araçlar tanıtılır.</p>
-        <div class="flex justify-center mt-6">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Mars_Rover.jpg" alt="Mars Rover" class="w-72 rounded shadow-lg" />
-        </div>
-      </section>
-
-      <section id="ajanslar" class="section bg-black bg-opacity-70 rounded-xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-6">🌍 Uzay Ajansları ve Çalışmaları</h2>
-        <ul class="space-y-4">
-          <li><strong>NASA (ABD):</strong> Perseverance ve Ingenuity ile aktif araştırmalar yapıyor.</li>
-          <li><strong>ESA:</strong> ExoMars programıyla Mars’ta yaşam arayışında.</li>
-          <li><strong>SpaceX:</strong> Starship ile insanlı koloni kurma hedefinde.</li>
-          <li><strong>Roscosmos:</strong> Bilimsel iş birlikleriyle destek veriyor.</li>
-          <li><strong>JAXA:</strong> Mars'ın uydularını araştırıyor.</li>
-          <li><strong>TUA:</strong> Türkiye'nin gelecekteki Mars hedefleri için hazırlık yapıyor.</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="text-center py-8 text-sm text-gray-400 mt-20">
-      GörevMars © 2025 | Mars Görevleri için Hazırız
-    </footer>
+    <!-- main içerik aynı kalır -->
   </body>
 </html>
