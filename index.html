@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GörevMars | Uzay Ajansları Merkezi</title>
+    <title>GörevMars | Mars Görevleri</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
     <style>
       body {
         font-family: 'Roboto', sans-serif;
-        background: url('https://upload.wikimedia.org/wikipedia/commons/3/3f/Messier_104_-_Hubble_Space_Telescope_-_2003.jpg') no-repeat center center fixed;
+        background: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg') no-repeat center center fixed;
         background-size: cover;
       }
       .glass {
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(12px);
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
       }
       .orbitron {
         font-family: 'Orbitron', sans-serif;
@@ -22,43 +22,52 @@
     </style>
   </head>
   <body class="text-white">
-    <header class="text-center py-10 bg-black bg-opacity-80">
-      <h1 class="text-5xl orbitron text-cyan-400">GörevMars</h1>
-      <p class="mt-2 text-lg">Uzay Ajanslarını ve Görevlerini Tek Çatı Altında Toplayan Merkez</p>
+    <header class="text-center py-16 bg-black bg-opacity-80">
+      <h1 class="text-6xl orbitron text-red-400">GörevMars</h1>
+      <p class="mt-4 text-2xl">Mars'a Yolculuk Başladı</p>
     </header>
 
-    <nav class="bg-black bg-opacity-70 py-4 text-center sticky top-0 z-50">
-      <a href="#spacex" class="mx-4 text-cyan-300 hover:underline">SpaceX</a>
-      <a href="#nasa" class="mx-4 text-cyan-300 hover:underline">NASA</a>
-      <a href="#esa" class="mx-4 text-cyan-300 hover:underline">ESA</a>
-      <a href="#tua" class="mx-4 text-cyan-300 hover:underline">TUA</a>
+    <nav class="bg-black bg-opacity-80 py-4 text-center sticky top-0 z-50">
+      <a href="#hakkinda" class="mx-4 text-red-300 hover:underline">Mars Hakkında</a>
+      <a href="#gorevler" class="mx-4 text-red-300 hover:underline">Görevler</a>
+      <a href="#araclar" class="mx-4 text-red-300 hover:underline">Teknoloji</a>
+      <a href="#iletisim" class="mx-4 text-red-300 hover:underline">İletişim</a>
     </nav>
 
-    <main class="max-w-6xl mx-auto p-6 space-y-8">
-      <!-- Ajans Bölümü Şablonu Başlangıç -->
-      <section id="spacex" class="glass p-6 rounded-2xl">
-        <h2 class="text-3xl orbitron text-yellow-400">🚀 SpaceX</h2>
-        <p>SpaceX, Elon Musk tarafından kurulan ve Mars'a insan göndermeyi hedefleyen özel bir uzay şirketidir.</p>
+    <main class="max-w-6xl mx-auto p-6 space-y-12">
+      <section id="hakkinda" class="glass p-8 rounded-2xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-4">🪐 Mars Hakkında</h2>
+        <p>Mars, Güneş Sistemi'nin dördüncü gezegenidir ve insanlık için gelecekteki yaşam alanı olarak değerlendirilmektedir. İnce atmosferi, devasa volkanları ve kurumuş nehir yataklarıyla dikkat çeker.</p>
       </section>
 
-      <section id="nasa" class="glass p-6 rounded-2xl">
-        <h2 class="text-3xl orbitron text-yellow-400">🛰️ NASA</h2>
-        <p>NASA, ABD'nin uzay ajansıdır. Ay ve Mars görevleri, teleskop projeleri ve uluslararası iş birlikleri yürütür.</p>
+      <section id="gorevler" class="glass p-8 rounded-2xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-4">🚀 Mars Görevleri</h2>
+        <ul class="list-disc ml-6 space-y-2">
+          <li><strong>Perseverance (2020)</strong>: Mars yüzeyinde yaşam belirtileri araştırıyor.</li>
+          <li><strong>Artemis Mars Transfer</strong>: İnsanlı Mars yolculuğu ön hazırlık görevi.</li>
+          <li><strong>Türk Mars Projesi (Gelecek)</strong>: Türkiye'nin Mars'a ilk keşif misyonu.</li>
+        </ul>
       </section>
 
-      <section id="esa" class="glass p-6 rounded-2xl">
-        <h2 class="text-3xl orbitron text-yellow-400">🇪🇺 ESA</h2>
-        <p>ESA, Avrupa Uzay Ajansı’dır. Çok uluslu uzay projeleri ve bilimsel araştırmalar yürütür.</p>
+      <section id="araclar" class="glass p-8 rounded-2xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-4">🔧 Teknoloji ve Araçlar</h2>
+        <p>Görevlerde kullanılan roverlar, iniş sistemleri, yaşam destek modülleri ve iletişim uyduları gibi araçlar tanıtılır. SpaceX Starship, NASA'nın Atlas V roketi, yeraltı sondaj cihazları bu bölümde açıklanabilir.</p>
       </section>
 
-      <section id="tua" class="glass p-6 rounded-2xl">
-        <h2 class="text-3xl orbitron text-yellow-400">🇹🇷 TUA</h2>
-        <p>Türkiye Uzay Ajansı, milli uzay programını yöneten devlet kurumudur. Ay görevleri ve uydu projeleri yürütmektedir.</p>
+      <section id="iletisim" class="glass p-8 rounded-2xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-4">📡 İletişim ve Katılım</h2>
+        <p>GörevMars hakkında daha fazla bilgi almak veya katkıda bulunmak isterseniz bize ulaşın.</p>
+        <form class="mt-4 space-y-4">
+          <input type="text" placeholder="Adınız" class="w-full p-2 rounded bg-black bg-opacity-40 text-white border border-gray-500" />
+          <input type="email" placeholder="E-posta" class="w-full p-2 rounded bg-black bg-opacity-40 text-white border border-gray-500" />
+          <textarea placeholder="Mesajınız" class="w-full p-2 rounded bg-black bg-opacity-40 text-white border border-gray-500"></textarea>
+          <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded text-white">Gönder</button>
+        </form>
       </section>
     </main>
 
-    <footer class="text-center py-6 text-sm text-gray-400 bg-black bg-opacity-80">
-      GörevMars © 2025 | Tüm Hakları Saklıdır | Uzayın Geleceği Burada
+    <footer class="text-center py-8 text-sm text-gray-300 bg-black bg-opacity-80">
+      GörevMars © 2025 | Mars Görevleri için Hazırız
     </footer>
   </body>
 </html>
