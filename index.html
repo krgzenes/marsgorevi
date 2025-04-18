@@ -1,7 +1,45 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>$1
-    <link rel="icon" href="/gorevmars-logo.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GörevMars | Mars Görevleri</title>
+    <link rel="icon" href="/gorevmars-logo.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #000;
+        color: white;
+        scroll-behavior: smooth;
+        background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        background-repeat: repeat;
+        animation: stars 100s linear infinite;
+      }
+      @keyframes stars {
+        from { background-position: 0 0; }
+        to { background-position: 10000px 5000px; }
+      }
+      .orbitron {
+        font-family: 'Orbitron', sans-serif;
+      }
+      .nav-link:hover {
+        color: #f87171;
+        transition: all 0.3s ease;
+      }
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -140,6 +178,15 @@
   </div>
 </section>
 
+<section id="canli-mars" class="py-24 px-6 max-w-6xl mx-auto">
+  <h2 class="text-4xl orbitron text-cyan-400 mb-10 text-center">📡 Canlı Mars Takibi</h2>
+  <div class="text-center text-lg">
+    <p class="mb-4">Aşağıdaki görselle Mars'ın yüzey haritası ve güncel uydu görüntüleri simüle edilmektedir.</p>
+    <iframe src="https://eyes.nasa.gov/apps/mars3d/#/" width="100%" height="600" class="rounded shadow-lg border-2 border-cyan-500"></iframe>
+    <p class="mt-4 text-sm text-gray-400">🔗 Kaynak: NASA Mars 3D Live (eyes.nasa.gov)</p>
+  </div>
+</section>
+
 <!-- Diğer bölümler (araclar, ajanslar, takvim) zaten gelişmiş şekilde tanımlı -->
 
   <script>
@@ -159,4 +206,3 @@ function filterTech(type) {
 </script>
 </body>
 </html>
-
