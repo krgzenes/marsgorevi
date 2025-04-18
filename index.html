@@ -4,109 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GörevMars | Mars Görevleri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
+      body {
         font-family: 'Roboto', sans-serif;
         background-color: #000;
         color: white;
         scroll-behavior: smooth;
       }
-      .section {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 4rem 2rem;
-        opacity: 0;
-        transform: translateY(50px);
-        animation: fadeInUp 1s ease forwards;
-      }
       .orbitron {
         font-family: 'Orbitron', sans-serif;
       }
-      .nav-link {
-        padding: 0.5rem 1rem;
-        transition: all 0.3s ease;
-        font-weight: 300;
-      }
       .nav-link:hover {
         color: #f87171;
-        transform: scale(1.05);
-      }
-      .hero-image {
-        position: relative;
-        height: 100vh;
-        background: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg') no-repeat center center / cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        padding: 4rem 2rem;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 1rem;
-        display: inline-block;
-      }
-      .hero-content h1 {
-        font-size: 4rem;
-        font-weight: 600;
-        color: #ffe600;
-      }
-      @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(50px); }
-        100% { opacity: 1; transform: translateY(0); }
-      }
-      .button-style {
-        border: 1px solid white;
-        padding: 0.75rem 1.5rem;
-        text-transform: uppercase;
-        font-size: 0.875rem;
-        font-weight: 500;
         transition: all 0.3s ease;
-        display: inline-block;
-      }
-      .button-style:hover {
-        background-color: white;
-        color: black;
       }
     </style>
   </head>
   <body>
-    <header class="sticky top-0 z-50 bg-black bg-opacity-80 text-white flex justify-between items-center px-6 py-4">
-      <div class="text-2xl font-bold orbitron">GörevMars</div>
-      <nav class="space-x-6">
-        <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
-        <a href="#gorevler" class="nav-link">Görevler</a>
-        <a href="#araclar" class="nav-link">Teknoloji</a>
-        <a href="#ajanslar" class="nav-link">Uzay Ajansları</a>
-      </nav>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-3xl font-bold orbitron tracking-wide">GörevMars</h1>
+        <nav class="space-x-6 text-sm uppercase">
+          <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
+          <a href="#gorevler" class="nav-link">Görevler</a>
+          <a href="#araclar" class="nav-link">Teknoloji</a>
+          <a href="#ajanslar" class="nav-link">Ajanslar</a>
+        </nav>
+      </div>
     </header>
 
-    <section class="hero-image">
-      <div class="hero-content">
-        <h1 class="orbitron">Mars'a Yolculuk Başladı</h1>
-        <p class="mt-4 text-lg max-w-xl mx-auto">İnsanlığın kızıl gezegene olan büyük görevini keşfedin. Ajanslar, görevler ve teknolojilerle GörevMars'a hoş geldiniz.</p>
-        <a href="#gorevler" class="mt-6 button-style">Görevleri İncele</a>
+    <section class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg');">
+      <div class="bg-black bg-opacity-70 p-10 rounded-xl text-center">
+        <h2 class="text-5xl font-bold orbitron text-yellow-400 mb-4">Mars'a Yolculuk Başladı</h2>
+        <p class="max-w-xl mx-auto mb-6 text-lg">İnsanlığın kızıl gezegene olan büyük görevini keşfedin. Ajanslar, görevler ve teknolojilerle GörevMars'a hoş geldiniz.</p>
+        <a href="#gorevler" class="inline-block border border-white px-6 py-2 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition">Görevleri İncele</a>
       </div>
     </section>
 
-    <section id="ajanslar" class="section">
-      <h2 class="text-4xl orbitron text-red-400 mb-6">🌍 Uzay Ajansları ve Çalışmaları</h2>
-      <ul class="space-y-4 text-lg">
-        <li><strong>NASA (ABD):</strong> Perseverance ve Ingenuity ile aktif araştırmalar yapıyor.</li>
-        <li><strong>ESA:</strong> ExoMars programıyla Mars’ta yaşam arayışında.</li>
-        <li><strong>SpaceX:</strong> Starship ile insanlı koloni kurma hedefinde.</li>
-        <li><strong>Roscosmos:</strong> Bilimsel iş birlikleriyle destek veriyor.</li>
-        <li><strong>JAXA:</strong> Mars'ın uydularını araştırıyor.</li>
-        <li><strong>TUA:</strong> Türkiye'nin gelecekteki Mars hedefleri için hazırlık yapıyor.</li>
-      </ul>
+    <section id="ajanslar" class="py-24 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl orbitron text-red-400 mb-10 text-center">🌍 Uzay Ajansları ve Çalışmaları</h2>
+      <div class="space-y-6 text-lg">
+        <p><strong>NASA (ABD):</strong> Perseverance ve Ingenuity ile aktif araştırmalar yapıyor.</p>
+        <p><strong>ESA:</strong> ExoMars programıyla Mars’ta yaşam arayışında.</p>
+        <p><strong>SpaceX:</strong> Starship ile insanlı koloni kurma hedefinde.</p>
+        <p><strong>Roscosmos:</strong> Bilimsel iş birlikleriyle destek veriyor.</p>
+        <p><strong>JAXA:</strong> Mars'ın uydularını araştırıyor.</p>
+        <p><strong>TUA:</strong> Türkiye'nin gelecekteki Mars hedefleri için hazırlık yapıyor.</p>
+      </div>
     </section>
   </body>
 </html>
+
