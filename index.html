@@ -43,16 +43,18 @@
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 class="flex items-center space-x-4">
-          <img src="/gorevmars-logo.png" alt="GörevMars Logo" class="h-12">
-        </h1>
-        <nav class="space-x-6 text-sm uppercase">
+        <h1 class="text-2xl md:text-3xl font-bold orbitron text-yellow-300 tracking-wider">
+  🚀 Görev<span class="text-red-400">MARS</span>
+</h1>
+        $1
+          <a href="#canli-mars" class="nav-link">Canlı Takip</a>
           <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
           <a href="#gorevler" class="nav-link">Görevler</a>
           <a href="#araclar" class="nav-link">Teknoloji</a>
           <a href="#ajanslar" class="nav-link">Ajanslar</a>
           <a href="#haberler" class="nav-link">Haberler</a>
-          <a href="#takvim" class="nav-link">Takvim</a>
+          $1
+          <a href="#mars-harita" class="nav-link">Mars Haritası</a>
         </nav>
       </div>
     </header>
@@ -179,11 +181,40 @@
 </section>
 
 <section id="canli-mars" class="py-24 px-6 max-w-6xl mx-auto">
+  <div class="grid md:grid-cols-2 gap-6 mb-12">
+    <div class="card text-center">
+      <h3 class="text-2xl text-cyan-300 mb-2">🔊 Mars Radyo</h3>
+      <p class="text-sm mb-4">Mars görevlerinden gelen ses örnekleri veya simüle edilmiş radyo yayını burada çalabilir.</p>
+      <audio controls class="mx-auto">
+        <source src="https://mars.nasa.gov/system/downloadable_items/45842_Perseverance_Audio_Sample.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+      </audio>
+    </div>
+    <div class="card text-center">
+      <h3 class="text-2xl text-cyan-300 mb-2">🌡️ Mars Hava Durumu</h3>
+      <p class="text-sm mb-4">Mars'ın Jezero Krateri'nden alınan son hava verileri (örnek):</p>
+      <ul class="text-sm text-left mx-auto inline-block">
+        <li>🔸 Sıcaklık: -63°C</li>
+        <li>🔸 Basınç: 715 Pa</li>
+        <li>🔸 Rüzgar: 5.5 m/s (kuzeybatı)</li>
+        <li>🔸 Toz: Orta seviyede</li>
+      </ul>
+    </div>
+  </div>
   <h2 class="text-4xl orbitron text-cyan-400 mb-10 text-center">📡 Canlı Mars Takibi</h2>
   <div class="text-center text-lg">
     <p class="mb-4">Aşağıdaki görselle Mars'ın yüzey haritası ve güncel uydu görüntüleri simüle edilmektedir.</p>
     <iframe src="https://eyes.nasa.gov/apps/mars3d/#/" width="100%" height="600" class="rounded shadow-lg border-2 border-cyan-500"></iframe>
     <p class="mt-4 text-sm text-gray-400">🔗 Kaynak: NASA Mars 3D Live (eyes.nasa.gov)</p>
+  </div>
+</section>
+
+<section id="mars-harita" class="py-24 px-6 max-w-6xl mx-auto">
+  <h2 class="text-4xl orbitron text-orange-300 mb-10 text-center">🗺️ Etkileşimli Mars Haritası</h2>
+  <div class="text-center text-lg">
+    <p class="mb-4">Harita üzerinden Mars üzerindeki görev noktaları, iniş alanları ve keşif bölgelerini görebilirsiniz.</p>
+    <iframe src="https://mars.nasa.gov/maps/location/?mission=Mars2020" width="100%" height="600" class="rounded shadow-lg border-2 border-orange-400"></iframe>
+    <p class="mt-4 text-sm text-gray-400">🔗 Kaynak: NASA Mars 2020 Harita Arayüzü</p>
   </div>
 </section>
 
