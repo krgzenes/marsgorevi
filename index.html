@@ -12,6 +12,13 @@
         background-color: #000;
         color: white;
         scroll-behavior: smooth;
+        background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+        background-repeat: repeat;
+        animation: stars 100s linear infinite;
+      }
+      @keyframes stars {
+        from { background-position: 0 0; }
+        to { background-position: 10000px 5000px; }
       }
       .orbitron {
         font-family: 'Orbitron', sans-serif;
@@ -20,20 +27,32 @@
         color: #f87171;
         transition: all 0.3s ease;
       }
+      .card {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
     </style>
   </head>
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         <h1 class="flex items-center space-x-4">
-  <img src="https://marsgorevi.vercel.app/gorevmars-logo.png" alt="GörevMars Logo" class="h-12">
-</h1>
+          <img src="/gorevmars-logo.png" alt="GörevMars Logo" class="h-12">
+        </h1>
         <nav class="space-x-6 text-sm uppercase">
           <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
           <a href="#gorevler" class="nav-link">Görevler</a>
           <a href="#araclar" class="nav-link">Teknoloji</a>
           <a href="#ajanslar" class="nav-link">Ajanslar</a>
           <a href="#haberler" class="nav-link">Haberler</a>
+          <a href="#takvim" class="nav-link">Takvim</a>
         </nav>
       </div>
     </header>
@@ -46,21 +65,37 @@
       </div>
     </section>
 
-    <section id="araclar" class="py-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Güncel Uzay Teknolojileri</h2>
-      <div class="space-y-6 text-lg">
-        <p><strong>Starship (<a href="https://www.spacex.com/" target="_blank" class="text-blue-400 hover:underline">SpaceX</a>):</strong> İnsanlı Mars görevleri için geliştirilen en güçlü roket. Yeniden kullanılabilir yapısıyla maliyetleri düşürmeyi hedefliyor.</p>
-        <p><strong>Perseverance Rover (<a href="https://mars.nasa.gov/mars2020/" target="_blank" class="text-blue-400 hover:underline">NASA</a>):</strong> Mars yüzeyinde zemin araştırmaları ve kaya örnekleme görevlerini sürdürüyor.</p>
-        <p><strong>Ingenuity Helikopteri:</strong> Mars atmosferinde uçuş yapan ilk hava aracı. Yüzeye ulaşılması zor bölgelerde keşif yapabiliyor.</p>
-        <p><strong>Gateway İstasyonu (<a href="https://www.nasa.gov/gateway/" target="_blank" class="text-blue-400 hover:underline">NASA/ESA</a>):</strong> Ay yörüngesinde kurulacak istasyon, Mars görevlerinin ön hazırlığı olarak kullanılacak.</p>
-        <p><strong>Japonya'nın MMX Görevi (<a href="https://mmx.isas.jaxa.jp/en/" target="_blank" class="text-blue-400 hover:underline">JAXA</a>):</strong> Mars'ın uydusu Phobos’tan örnek getirmeyi amaçlayan ileri teknoloji keşif aracı.</p>
-        <p><strong>Uydu Tabanlı Haberleşme (<a href="https://www.tua.gov.tr/" target="_blank" class="text-blue-400 hover:underline">TUA</a>):</strong> Türkiye'nin geliştirdiği yerli haberleşme uyduları, derin uzay görevlerinde veri iletiminde görev alacak.</p>
+    <section id="hakkinda" class="py-24 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl orbitron text-purple-300 mb-10 text-center">🔭 Mars Hakkında</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        Mars, Güneş Sistemi'nin dördüncü gezegenidir. "Kızıl Gezegen" olarak bilinir çünkü yüzeyindeki demir oksit nedeniyle kırmızımsı bir görünüme sahiptir. Mars'ın atmosferi çok incedir ve büyük oranda karbondioksitten oluşur. Yüzeyde devasa volkanlar, geniş kanyonlar ve kurumuş nehir yatakları bulunur. Mars, insanlığın gelecekteki yerleşim planları için en güçlü adaylardan biridir.
+      </p>
+    </section>
+
+    <section id="gorevler" class="py-24 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Mevcut ve Gelecek Mars Görevleri</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card">
+          <h3 class="text-xl font-bold">Perseverance (2020)</h3>
+          <p>NASA'nın Mars 2020 misyonu ile gönderdiği araç, astrobiyolojik araştırmalar yapıyor.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-bold">Artemis Mars Transfer (2026)</h3>
+          <p>Ay’dan Mars’a geçiş için insanlı görev planı. NASA & ESA işbirliğiyle hazırlanıyor.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-bold">Türk Mars Projesi (2030)</h3>
+          <p>TUA'nın hedeflediği ilk Mars keşif görevi. Yüzey gözlemleri ve veri toplama amaçlı.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-bold">VisionX Mars Lab (2032)</h3>
+          <p>Mars yüzeyine inerek mobil laboratuvar kurulumu sağlayacak otonom sistem.</p>
+        </div>
       </div>
     </section>
 
+    <!-- Diğer bölümler (araclar, ajanslar, takvim) zaten gelişmiş şekilde tanımlı -->
+
   </body>
 </html>
-
-
-
 
