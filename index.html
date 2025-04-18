@@ -11,262 +11,77 @@
       html {
         scroll-behavior: smooth;
       }
-
       body {
         font-family: 'Roboto', sans-serif;
-        background-color: #000;
+        background-color: #0d0d0d;
         color: white;
-        scroll-behavior: smooth;
-        background-image: url('https://mars.nasa.gov/layout/mars2020/images/PIA23821-RoverNamePlateonMars-web.jpg');
-        background-repeat: repeat;
-        background-size: cover;
-      }
-      
-        to { background-position: 10000px 5000px; }
       }
       .orbitron {
         font-family: 'Orbitron', sans-serif;
       }
-      .nav-link:hover {
-        color: #f87171;
-        transition: all 0.3s ease;
+      .nav-link {
+        @apply text-white hover:text-yellow-400 transition;
       }
-      .card {
-        background-color: rgba(255, 255, 255, 0.05);
-        padding: 1.5rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease;
-      }
-      .card:hover {
-        transform: translateY(-5px);
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-          .glass {
-        backdrop-filter: blur(10px);
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        transition: all 0.3s ease-in-out;
-      }
-
-      .glass:hover {
-        background: rgba(255, 255, 255, 0.08);
-        transform: translateY(-3px);
-      }
-
-      .hero-gradient {
-        background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-      }
+    </style>
+  </head>
   <body>
-    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 class="text-3xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 orbitron uppercase">
-  GÖREVMARS
-</h1>
-        
-          <a href="#canli-mars" class="nav-link">Canlı Takip</a>
-          <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
+    <header class="bg-black bg-opacity-90 fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-red-400 to-pink-500 orbitron uppercase">GÖREVMARS</h1>
+        <nav class="space-x-4 hidden md:block">
+          <a href="#hakkinda" class="nav-link">Hakkında</a>
           <a href="#gorevler" class="nav-link">Görevler</a>
           <a href="#araclar" class="nav-link">Teknoloji</a>
           <a href="#ajanslar" class="nav-link">Ajanslar</a>
-          <a href="#haberler" class="nav-link">Haberler</a>
-          
-          <a href="#mars-harita" class="nav-link">Mars Haritası</a>
+          <a href="#canli" class="nav-link">Canlı</a>
         </nav>
       </div>
     </header>
 
-    <section class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://mars.nasa.gov/system/news_items/main_images/9445_PIA25681-FigureA-web.jpg');">
-      <div class="glass p-10 rounded-xl text-center">
-        <h2 class="text-5xl font-bold orbitron text-yellow-400 mb-4">Mars'a Yolculuk Başladı</h2>
-        <p class="max-w-xl mx-auto mb-6 text-lg">İnsanlığın kızıl gezegene olan büyük görevini keşfedin. Ajanslar, görevler ve teknolojilerle GörevMars'a hoş geldiniz.</p>
-        <a href="#gorevler" class="inline-block border border-white px-6 py-2 uppercase text-sm tracking-wide hover:bg-white hover:text-black transition">Görevleri İncele</a>
-      </div>
-    </section>
-
-    <section id="hakkinda" class="py-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-4xl orbitron text-purple-300 mb-10 text-center">🔭 Mars Hakkında</h2>
-      <p class="text-lg leading-relaxed text-gray-300">
-        Mars, Güneş Sistemi'nin dördüncü gezegenidir. "Kızıl Gezegen" olarak bilinir çünkü yüzeyindeki demir oksit nedeniyle kırmızımsı bir görünüme sahiptir. Mars'ın atmosferi çok incedir ve büyük oranda karbondioksitten oluşur. Yüzeyde devasa volkanlar, geniş kanyonlar ve kurumuş nehir yatakları bulunur. Mars, insanlığın gelecekteki yerleşim planları için en güçlü adaylardan biridir.
-      </p>
-    </section>
-
-    <section id="gorevler" class="py-24 px-6 max-w-6xl mx-auto">
-  <h2 class="text-4xl orbitron text-yellow-300 mb-10 text-center">🚀 Uzay Ajanslarının Yakın Gelecek Görevleri</h2>
-  <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="card glass">
-      <img src="https://mars.nasa.gov/system/news_items/main_images/9678_PIA25681-MarsSampleReturn.jpg" alt="NASA Görevi" class="w-full mb-4 rounded">
-      <h3 class="text-xl font-bold mb-2">NASA - Mars Sample Return (2028)</h3>
-      <p>Mars yüzeyinden alınan örneklerin dünyaya getirilmesi planlanıyor. Perseverance ile toplanan numuneler, yörüngeye fırlatılacak.</p>
-      <a href="https://mars.nasa.gov/mars-sample-return/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-    <div class="card glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/ESA_ExoMars_Rover_2022.png" alt="ESA Görevi" class="w-full mb-4 rounded">
-      <h3 class="text-xl font-bold mb-2">ESA - ExoMars Rover (2026)</h3>
-      <p>ESA'nın Rosalind Franklin Rover'ı, Mars'ta yaşam izlerini araştırmak üzere yüzeyde sondaj yapacak.</p>
-      <a href="https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-    <div class="card glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Starship_SN9_-_Jan_2021_%28cropped%29.jpg" alt="SpaceX Görevi" class="w-full mb-4 rounded">
-      <h3 class="text-xl font-bold mb-2">SpaceX - İlk Mars İnişi (2026)</h3>
-      <p>Starship ile insansız kargo inişi planlanıyor. Bu görev, insanlı kolonizasyon için ilk adım olacak.</p>
-      <a href="https://www.spacex.com/human-spaceflight/mars/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-    <div class="card glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/TUA_logo.png" alt="TUA Görevi" class="w-full mb-4 rounded bg-white p-2">
-      <h3 class="text-xl font-bold mb-2">TUA - Mars Mini Uydu (2029)</h3>
-      <p>Türkiye Uzay Ajansı'nın ilk derin uzay görevi olacak olan bu proje ile Mars yörüngesine mini uydu gönderilecek.</p>
-      <a href="https://www.tua.gov.tr" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-    <div class="card glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/JAXA_logo.svg" alt="JAXA Görevi" class="w-full mb-4 rounded bg-white p-2">
-      <h3 class="text-xl font-bold mb-2">JAXA - MMX Görevi (2026)</h3>
-      <p>Japonya'nın Mars'ın uydusu Phobos’tan örnek toplayıp dünyaya getirmeyi hedeflediği görev.</p>
-      <a href="https://mmx.isas.jaxa.jp/en/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-    <div class="card glass">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Roscosmos_logo_ru.svg" alt="Roscosmos Görevi" class="w-full mb-4 rounded bg-white p-2">
-      <h3 class="text-xl font-bold mb-2">Roscosmos - Mars 2030</h3>
-      <p>Roscosmos’un planladığı bu görevde yüzey araştırmaları ve biyolojik örneklemeler hedefleniyor.</p>
-      <a href="https://www.roscosmos.ru/" target="_blank" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-    </div>
-  </div>
-</section>
-
-    <section id="araclar" class="py-24 px-6 max-w-6xl mx-auto">
-  
-  <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Uzay Teknolojileri ve Aletleri</h2>
-  <div class="grid md:grid-cols-2 gap-6 text-lg">
-    <div class="card glass">
-  <img src="https://mars.nasa.gov/system/resources/detail_files/25778_PIA24543-FigureA-web.jpg" alt="Perseverance Aracı" class="w-full mb-4 rounded">
-  <h3 class="text-xl font-bold">🔬 Perseverance Rover</h3>
-  <p class="mb-2">Mars yüzeyinde jeolojik örnekler toplayan ve mikroorganizma izlerini araştıran bilimsel keşif aracıdır.</p>
-  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-</div>
-    <div class="card">
-  <img src="https://mars.nasa.gov/system/news_items/main_images/9090_PIA23720-FigureA-web.jpg" alt="Ingenuity Helikopteri" class="w-full mb-4 rounded">
-  <h3 class="text-xl font-bold">🚁 Ingenuity Helikopteri</h3>
-  <p class="mb-2">Mars atmosferinde ilk motorlu uçuşu gerçekleştiren mini helikopter. Yüzey keşiflerinde kullanılıyor.</p>
-  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-</div>
-    <div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Starship_SN9_-_Jan_2021_%28cropped%29.jpg/640px-Starship_SN9_-_Jan_2021_%28cropped%29.jpg" alt="Starship" class="w-full mb-4 rounded">
-  <h3 class="text-xl font-bold">🚀 SpaceX Starship</h3>
-  <p class="mb-2">Yüksek taşıma kapasitesi ve yeniden kullanılabilir yapısıyla Mars’a insan taşımayı hedefleyen yeni nesil roket.</p>
-  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-</div>
-    <div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/ESA_ExoMars_Rover_2022.png" alt="ExoMars Rover" class="w-full mb-4 rounded">
-  <h3 class="text-xl font-bold">🔍 ExoMars Rover</h3>
-  <p class="mb-2">ESA'nın Mars’a göndereceği gelişmiş keşif aracı. Toprak altından numune alarak yaşam izi arayacak.</p>
-  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-</div>
-    <div class="card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/TUA_logo.png" alt="TUA Uydusu" class="w-full mb-4 rounded">
-  <h3 class="text-xl font-bold">🛰 TUA - Yerli Mars Uydusu</h3>
-  <p class="mb-2">Türkiye Uzay Ajansı tarafından geliştirilen mini gözlem uydusu. Mars’ın yüzey haritalamasında kullanılacak.</p>
-  <a href="#" class="text-blue-400 hover:underline text-sm">🔗 Daha Fazla Bilgi</a>
-</div>
-  </div>
-</section>
-
-<section id="ajanslar" class="py-24 px-6 max-w-6xl mx-auto">
-  <h2 class="text-4xl orbitron text-red-400 mb-10 text-center">🛰️ Uzay Ajansları</h2>
-  <div class="grid md:grid-cols-2 gap-6 text-lg">
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">NASA</h3>
-      <p>NASA, insanlığı bilinmeyeni keşfetmeye teşvik eden ABD'nin ulusal uzay ajansıdır. Mars programları, Ay görevleri ve James Webb Uzay Teleskobu gibi projelerle uzay biliminde liderdir. <a href="https://www.nasa.gov/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">ESA</h3>
-      <p>ESA, Avrupa'nın uzay keşiflerini koordine eden ajanstır. ExoMars gibi misyonlarla Mars'a yönelik araştırmalarda aktif rol alır. <a href="https://www.esa.int/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">SpaceX</h3>
-      <p>Elon Musk tarafından kurulan SpaceX, uzay teknolojisinde devrim yapmayı hedefler. Starship projesiyle Mars kolonisi planlarının öncüsüdür. <a href="https://www.spacex.com/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">TUA</h3>
-      <p>Türkiye Uzay Ajansı, ülkenin uzay araştırmalarını yöneten resmi kuruluştur. Mars'a yönelik uydu projeleriyle ilk adımlarını atmaktadır. <a href="https://www.tua.gov.tr/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">Roscosmos</h3>
-      <p>Rusya'nın ulusal uzay ajansı olan Roscosmos, Mars araştırmaları ve Ay görevlerinde Sovyet mirasını sürdüren önemli bir oyuncudur. <a href="https://www.roscosmos.ru/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-    <div class="card">
-      <h3 class="text-2xl text-yellow-300">JAXA</h3>
-      <p>Japonya Uzay Araştırma Ajansı olan JAXA, Mars'ın uydularını keşfetmek üzere MMX misyonunu geliştirmiştir. <a href="https://global.jaxa.jp/" target="_blank" class="text-blue-400 underline">Resmi Web Sitesi</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="canli-mars" class="py-24 px-6 max-w-6xl mx-auto">
-  <div class="grid md:grid-cols-2 gap-6 mb-12">
-    <div class="card text-center">
-      <h3 class="text-2xl text-cyan-300 mb-2">🔊 Mars Radyo</h3>
-      <p class="text-sm mb-4">Mars görevlerinden gelen ses örnekleri veya simüle edilmiş radyo yayını burada çalabilir.</p>
-      <audio controls class="mx-auto">
-        <source src="https://mars.nasa.gov/system/downloadable_items/45842_Perseverance_Audio_Sample.mp3" type="audio/mpeg">
-        Tarayıcınız ses öğesini desteklemiyor.
-      </audio>
-    </div>
-    <div class="card text-center">
-      <h3 class="text-2xl text-cyan-300 mb-2">🌡️ Mars Hava Durumu</h3>
-      <p class="text-sm mb-4">Mars'ın Jezero Krateri'nden alınan son hava verileri (örnek):</p>
-      <ul class="text-sm text-left mx-auto inline-block">
-        <li>🔸 Sıcaklık: -63°C</li>
-        <li>🔸 Basınç: 715 Pa</li>
-        <li>🔸 Rüzgar: 5.5 m/s (kuzeybatı)</li>
-        <li>🔸 Toz: Orta seviyede</li>
-      </ul>
-    </div>
-  </div>
-  <h2 class="text-4xl orbitron text-cyan-400 mb-10 text-center">📡 Canlı Mars Takibi</h2>
-  <div class="text-center text-lg">
-    <p class="mb-4">Aşağıdaki görselle Mars'ın yüzey haritası ve güncel uydu görüntüleri simüle edilmektedir.</p>
-    <iframe src="https://eyes.nasa.gov/apps/mars3d/#/" width="100%" height="600" class="rounded shadow-lg border-2 border-cyan-500"></iframe>
-    <p class="mt-4 text-sm text-gray-400">🔗 Kaynak: NASA Mars 3D Live (eyes.nasa.gov)</p>
-  </div>
-</section>
-
-<section id="mars-harita" class="py-24 px-6 max-w-6xl mx-auto">
-  <h2 class="text-4xl orbitron text-orange-300 mb-10 text-center">🗺️ Etkileşimli Mars Haritası</h2>
-  <div class="text-center text-lg">
-    <p class="mb-4">Harita üzerinden Mars üzerindeki görev noktaları, iniş alanları ve keşif bölgelerini görebilirsiniz.</p>
-    <iframe src="https://mars.nasa.gov/layout/embed/map.html" width="100%" height="600" class="rounded shadow-lg border-2 border-orange-400"></iframe>
-    <p class="mt-4 text-sm text-gray-400">🔗 Kaynak: NASA Mars 2020 Harita Arayüzü</p>
-  </div>
-</section>
-
-<!-- Diğer bölümler (araclar, ajanslar, takvim) zaten gelişmiş şekilde tanımlı -->
-
-  <script>
-function filterTech(type) {
-  const cards = document.querySelectorAll('#araclar .card');
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    if (type === 'all') {
-      card.style.display = 'block';
-    } else if (text.includes(type)) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
-<script>
-function filterMissions(agency) {
-  const cards = document.querySelectorAll('#gorevler .card');
-  cards.forEach(card => {
-    if (agency === 'all' || card.dataset.agency === agency) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-</script>
-</body>
+    <main class="pt-32 px-6 max-w-6xl mx-auto">
+      <section id="hakkinda" class="mb-24">
+        <h2 class="text-4xl orbitron text-purple-300 mb-6">🔭 Mars Hakkında</h2>
+        <p class="text-gray-300 leading-loose">
+          Mars, Güneş Sistemi'nin dördüncü gezegenidir. "Kızıl Gezegen" olarak bilinir çünkü yüzeyindeki demir oksit nedeniyle kırmızımsı bir görünüme sahiptir. Atmosferi incedir, karbondioksit ağırlıklıdır. Yüzeyde devasa yanardağlar, kurumuş nehir yatakları ve olası yaşam belirtileri dikkat çeker.
+        </p>
+      </section>
+      <section id="gorevler" class="mb-24">
+        <h2 class="text-4xl orbitron text-yellow-300 mb-6">🚀 Yaklaşan Mars Görevleri</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white bg-opacity-5 p-4 rounded-lg">
+            <h3 class="text-xl text-yellow-300 font-bold">NASA - Mars Sample Return</h3>
+            <p>2028'de örnekleri dünyaya getirmeyi hedefleyen görev.</p>
+          </div>
+          <div class="bg-white bg-opacity-5 p-4 rounded-lg">
+            <h3 class="text-xl text-yellow-300 font-bold">ESA - ExoMars</h3>
+            <p>2026'da Mars'ta yaşam belirtilerini aramak için yola çıkacak.</p>
+          </div>
+        </div>
+      </section>
+      <section id="araclar" class="mb-24">
+        <h2 class="text-4xl orbitron text-green-400 mb-6">🛠️ Mars Teknolojileri</h2>
+        <ul class="space-y-4 text-gray-300">
+          <li><strong>Perseverance:</strong> Mars yüzeyinde örnek topluyor.</li>
+          <li><strong>Ingenuity:</strong> Mars'ta ilk motorlu uçuşu gerçekleştirdi.</li>
+        </ul>
+      </section>
+      <section id="ajanslar" class="mb-24">
+        <h2 class="text-4xl orbitron text-red-400 mb-6">🛰️ Uzay Ajansları</h2>
+        <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+          <div>
+            <h3 class="text-xl text-yellow-300 font-bold">NASA</h3>
+            <p>Amerikan uzay ajansı. <a href="https://nasa.gov" target="_blank" class="text-blue-400 underline">Resmi Site</a></p>
+          </div>
+          <div>
+            <h3 class="text-xl text-yellow-300 font-bold">ESA</h3>
+            <p>Avrupa Uzay Ajansı. <a href="https://esa.int" target="_blank" class="text-blue-400 underline">Resmi Site</a></p>
+          </div>
+        </div>
+      </section>
+      <section id="canli" class="mb-24">
+        <h2 class="text-4xl orbitron text-cyan-300 mb-6">📡 Canlı Mars Takibi</h2>
+        <iframe src="https://mars.nasa.gov/layout/embed/map.html" width="100%" height="400" class="rounded-lg"></iframe>
+      </section>
+    </main>
+  </body>
 </html>
