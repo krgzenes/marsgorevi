@@ -5,76 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GörevMars | Mars Görevleri</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
     <style>
-      body, html {
+      html, body {
         margin: 0;
         padding: 0;
-        height: 100%;
         font-family: 'Roboto', sans-serif;
+        background-color: #000;
+        color: white;
+        scroll-behavior: smooth;
       }
-      .video-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-      .glass {
-        background: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(10px);
+      .section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 2rem;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: fadeInUp 1s ease forwards;
       }
       .orbitron {
         font-family: 'Orbitron', sans-serif;
       }
-      .animate-spin-slow {
-        animation: spin 10s linear infinite;
+      .nav-link {
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+        font-weight: 300;
       }
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      .nav-link:hover {
+        color: #f87171;
+        transform: scale(1.05);
       }
-      .gorevmars-logo {
-        font-size: 5rem;
-        letter-spacing: 0.2rem;
-        background: linear-gradient(to right, #ff0000, #ffa500, #ffff00);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: pulse 3s infinite ease-in-out;
+      .hero-video {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
       }
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.05); opacity: 0.8; }
+      .hero-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 4rem 2rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 1rem;
+        display: inline-block;
+      }
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        color: #ffe600;
+      }
+      @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(50px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .button-style {
+        border: 1px solid white;
+        padding: 0.75rem 1.5rem;
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      .button-style:hover {
+        background-color: white;
+        color: black;
       }
     </style>
   </head>
-  <body class="text-white">
-    <video autoplay muted loop class="video-bg">
-      <source src="https://cdn.pixabay.com/vimeo/759449774/mars-planet-112994.mp4?width=1280&hash=fb5b8121e5bc927b6a4b595ea04fa2c91ad17bd9" type="video/mp4">
-    </video>
-
-    <header class="text-center py-16 relative z-10">
-      <h1 class="gorevmars-logo orbitron">GörevMars</h1>
-      <p class="mt-4 text-2xl">Mars'a Yolculuk Başladı</p>
+  <body>
+    <header class="sticky top-0 z-50 bg-black bg-opacity-80 text-white flex justify-between items-center px-6 py-4">
+      <div class="text-2xl font-bold orbitron">GörevMars</div>
+      <nav class="space-x-6">
+        <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
+        <a href="#gorevler" class="nav-link">Görevler</a>
+        <a href="#araclar" class="nav-link">Teknoloji</a>
+        <a href="#ajanslar" class="nav-link">Uzay Ajansları</a>
+      </nav>
     </header>
 
-    <nav class="bg-black bg-opacity-80 py-4 text-center sticky top-0 z-50">
-      <a href="#hakkinda" class="mx-4 text-red-300 hover:underline">Mars Hakkında</a>
-      <a href="#gorevler" class="mx-4 text-red-300 hover:underline">Görevler</a>
-      <a href="#araclar" class="mx-4 text-red-300 hover:underline">Teknoloji</a>
-      <a href="#ajanslar" class="mx-4 text-red-300 hover:underline">Uzay Ajansları</a>
-    </nav>
+    <section class="hero-video">
+      <video autoplay muted loop>
+        <source src="https://cdn.pixabay.com/vimeo/759449774/mars-planet-112994.mp4?width=1280" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1 class="orbitron">Mars'a Yolculuk Başladı</h1>
+        <p class="mt-4 text-lg max-w-xl mx-auto">İnsanlığın kızıl gezegene olan büyük görevini keşfedin. Ajanslar, görevler ve teknolojilerle GörevMars'a hoş geldiniz.</p>
+        <a href="#gorevler" class="mt-6 button-style">Görevleri İncele</a>
+      </div>
+    </section>
 
-    <main class="max-w-6xl mx-auto p-6 space-y-12 relative z-10">
-      <section id="hakkinda" class="glass p-8 rounded-2xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-4">🪐 Mars Hakkında</h2>
+    <main class="max-w-6xl mx-auto space-y-20">
+      <section id="hakkinda" class="section">
+        <h2 class="text-4xl orbitron text-red-400 mb-6">🪐 Mars Hakkında</h2>
         <p>Mars, Güneş Sistemi'nin dördüncü gezegenidir ve insanlık için gelecekteki yaşam alanı olarak değerlendirilmektedir. İnce atmosferi, devasa volkanları ve kurumuş nehir yataklarıyla dikkat çeker.</p>
       </section>
 
-      <section id="gorevler" class="glass p-8 rounded-2xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-4">🚀 Mars Görevleri</h2>
+      <section id="gorevler" class="section bg-black bg-opacity-70 rounded-xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-6">🚀 Mars Görevleri</h2>
         <ul class="list-disc ml-6 space-y-2">
           <li><strong>Perseverance (2020)</strong>: Mars yüzeyinde yaşam belirtileri araştırıyor.</li>
           <li><strong>Artemis Mars Transfer</strong>: İnsanlı Mars yolculuğu ön hazırlık görevi.</li>
@@ -84,28 +124,28 @@
         </ul>
       </section>
 
-      <section id="araclar" class="glass p-8 rounded-2xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-4">🔧 Teknoloji ve Araçlar</h2>
-        <p>Görevlerde kullanılan roverlar, iniş sistemleri, yaşam destek modülleri ve iletişim uyduları gibi araçlar tanıtılır. SpaceX Starship, NASA'nın Atlas V roketi, yeraltı sondaj cihazları bu bölümde açıklanabilir.</p>
+      <section id="araclar" class="section">
+        <h2 class="text-4xl orbitron text-red-400 mb-6">🔧 Teknoloji ve Araçlar</h2>
+        <p>Görevlerde kullanılan roverlar, iniş sistemleri, yaşam destek modülleri ve iletişim uyduları gibi araçlar tanıtılır.</p>
         <div class="flex justify-center mt-6">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Mars_Rover.jpg" alt="Mars Rover" class="w-64 h-64 animate-spin-slow" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Mars_Rover.jpg" alt="Mars Rover" class="w-72 rounded shadow-lg" />
         </div>
       </section>
 
-      <section id="ajanslar" class="glass p-8 rounded-2xl">
-        <h2 class="text-4xl orbitron text-red-400 mb-4">🌍 Uzay Ajansları ve Çalışmaları</h2>
+      <section id="ajanslar" class="section bg-black bg-opacity-70 rounded-xl">
+        <h2 class="text-4xl orbitron text-red-400 mb-6">🌍 Uzay Ajansları ve Çalışmaları</h2>
         <ul class="space-y-4">
-          <li><strong>NASA (ABD):</strong> Mars görevlerinde lider konumda. Perseverance ve Ingenuity gibi araçlarla Mars'ta aktif araştırmalar yürütüyor.</li>
-          <li><strong>ESA (Avrupa Uzay Ajansı):</strong> ExoMars programı ile Mars yüzeyinde yaşam belirtilerini araştırıyor. Rusya ve diğer ülkelerle iş birliği içinde çalışıyor.</li>
-          <li><strong>SpaceX (Özel Şirket):</strong> Starship projesi ile Mars'a insan göndermeyi hedefliyor. Koloni kurma hedefi var.</li>
-          <li><strong>Roscosmos (Rusya):</strong> Mars görevlerine bilimsel katkı sağlıyor. ESA ile ortak projelerde yer alıyor.</li>
-          <li><strong>JAXA (Japonya):</strong> Mars'ın uydularını araştıran görevler geliştiriyor ve teknoloji desteği sağlıyor.</li>
-          <li><strong>TUA (Türkiye Uzay Ajansı):</strong> Gelecekte Mars görevlerine katılmayı hedefliyor. Milli Uzay Programı kapsamında araştırmalar yürütüyor.</li>
+          <li><strong>NASA (ABD):</strong> Perseverance ve Ingenuity ile aktif araştırmalar yapıyor.</li>
+          <li><strong>ESA:</strong> ExoMars programıyla Mars’ta yaşam arayışında.</li>
+          <li><strong>SpaceX:</strong> Starship ile insanlı koloni kurma hedefinde.</li>
+          <li><strong>Roscosmos:</strong> Bilimsel iş birlikleriyle destek veriyor.</li>
+          <li><strong>JAXA:</strong> Mars'ın uydularını araştırıyor.</li>
+          <li><strong>TUA:</strong> Türkiye'nin gelecekteki Mars hedefleri için hazırlık yapıyor.</li>
         </ul>
       </section>
     </main>
 
-    <footer class="text-center py-8 text-sm text-gray-300 bg-black bg-opacity-80 relative z-10">
+    <footer class="text-center py-8 text-sm text-gray-400 mt-20">
       GörevMars © 2025 | Mars Görevleri için Hazırız
     </footer>
   </body>
