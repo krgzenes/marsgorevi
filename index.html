@@ -25,7 +25,9 @@
   <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90">
       <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 class="text-3xl font-bold orbitron tracking-wide">GörevMars</h1>
+        <h1 class="flex items-center space-x-4">
+  <img src="/mnt/data/A_logo_design_for_\"GÖREVMARS,\"_which_translates_to.png" alt="GörevMars Logo" class="h-12">
+</h1>
         <nav class="space-x-6 text-sm uppercase">
           <a href="#hakkinda" class="nav-link">Mars Hakkında</a>
           <a href="#gorevler" class="nav-link">Görevler</a>
@@ -44,58 +46,17 @@
       </div>
     </section>
 
-    <section id="ajanslar" class="py-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-4xl orbitron text-red-400 mb-10 text-center">🌍 Uzay Ajansları ve Çalışmaları</h2>
+    <section id="araclar" class="py-24 px-6 max-w-6xl mx-auto">
+      <h2 class="text-4xl orbitron text-green-400 mb-10 text-center">🛠️ Güncel Uzay Teknolojileri</h2>
       <div class="space-y-6 text-lg">
-        <p><strong><a href="#nasa-haber" class="underline hover:text-red-400">NASA (ABD):</a></strong> Perseverance ve Ingenuity ile aktif araştırmalar yapıyor.</p>
-        <p><strong><a href="#esa-haber" class="underline hover:text-red-400">ESA:</a></strong> ExoMars programıyla Mars’ta yaşam arayışında.</p>
-        <p><strong><a href="#spacex-haber" class="underline hover:text-red-400">SpaceX:</a></strong> Starship ile insanlı koloni kurma hedefinde.</p>
-        <p><strong><a href="#roscosmos-haber" class="underline hover:text-red-400">Roscosmos:</a></strong> Bilimsel iş birlikleriyle destek veriyor.</p>
-        <p><strong><a href="#jaxa-haber" class="underline hover:text-red-400">JAXA:</a></strong> Mars'ın uydularını araştırıyor.</p>
-        <p><strong><a href="#tua-haber" class="underline hover:text-red-400">TUA:</a></strong> Türkiye'nin gelecekteki Mars hedefleri için hazırlık yapıyor.</p>
+        <p><strong>Starship (<a href="https://www.spacex.com/" target="_blank" class="text-blue-400 hover:underline">SpaceX</a>):</strong> İnsanlı Mars görevleri için geliştirilen en güçlü roket. Yeniden kullanılabilir yapısıyla maliyetleri düşürmeyi hedefliyor.</p>
+        <p><strong>Perseverance Rover (<a href="https://mars.nasa.gov/mars2020/" target="_blank" class="text-blue-400 hover:underline">NASA</a>):</strong> Mars yüzeyinde zemin araştırmaları ve kaya örnekleme görevlerini sürdürüyor.</p>
+        <p><strong>Ingenuity Helikopteri:</strong> Mars atmosferinde uçuş yapan ilk hava aracı. Yüzeye ulaşılması zor bölgelerde keşif yapabiliyor.</p>
+        <p><strong>Gateway İstasyonu (<a href="https://www.nasa.gov/gateway/" target="_blank" class="text-blue-400 hover:underline">NASA/ESA</a>):</strong> Ay yörüngesinde kurulacak istasyon, Mars görevlerinin ön hazırlığı olarak kullanılacak.</p>
+        <p><strong>Japonya'nın MMX Görevi (<a href="https://mmx.isas.jaxa.jp/en/" target="_blank" class="text-blue-400 hover:underline">JAXA</a>):</strong> Mars'ın uydusu Phobos’tan örnek getirmeyi amaçlayan ileri teknoloji keşif aracı.</p>
+        <p><strong>Uydu Tabanlı Haberleşme (<a href="https://www.tua.gov.tr/" target="_blank" class="text-blue-400 hover:underline">TUA</a>):</strong> Türkiye'nin geliştirdiği yerli haberleşme uyduları, derin uzay görevlerinde veri iletiminde görev alacak.</p>
       </div>
     </section>
 
-    <section id="haberler" class="py-24 px-6 max-w-6xl mx-auto">
-      <h2 class="text-4xl orbitron text-yellow-400 mb-10 text-center">📰 Ajanslara Göre Haberler</h2>
-      <div id="nasa-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">NASA Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Perseverance yeni kaya örnekleri topladı.</li>
-          <li>Mars Helikopteri Ingenuity 50. uçuşunu tamamladı.</li>
-        </ul>
-      </div>
-      <div id="esa-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">ESA Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>ExoMars görevi tekrar başlatılıyor.</li>
-        </ul>
-      </div>
-      <div id="spacex-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">SpaceX Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Starship başarıyla test edildi.</li>
-          <li>2026'ya kadar Mars'a insan gönderme hedefi devam ediyor.</li>
-        </ul>
-      </div>
-      <div id="roscosmos-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">Roscosmos Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Roscosmos, ESA ile veri paylaşımına başladı.</li>
-        </ul>
-      </div>
-      <div id="jaxa-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">JAXA Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>Japonya Mars'ın uydusu Phobos’a keşif aracı gönderiyor.</li>
-        </ul>
-      </div>
-      <div id="tua-haber" class="mb-12">
-        <h3 class="text-2xl text-red-400 mb-4">TUA Haberleri</h3>
-        <ul class="list-disc ml-6 space-y-2">
-          <li>TUA, Mars araştırma ekibi oluşturdu.</li>
-        </ul>
-      </div>
-    </section>
   </body>
 </html>
